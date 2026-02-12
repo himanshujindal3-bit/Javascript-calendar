@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>digital calender</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+		<h1>Java script Calendar</h1>
+		<div class="hero">
+		<div class="calender">
+			<div class="left">
+				<p id="date">01</p>
+				<p id="day">Sunday</p>
+			</div>
+			<div class="right">
+				<p id="month">Janaury</p>
+				<p id="year">2020</p>
+			</div>
+		</div>
+	</div>
+
+<script>
+	const date = document.getElementById("date");
+	const day = document.getElementById("day");
+	const month = document.getElementById("month");
+	const year = document.getElementById("year");
+
+	const today = new Date();
+
+	const weekdays = ["sunday","monday","tuesday","wednesday","thrusday","friday","saturday"];
+	const allmonths = ["Janurary","ferbaury","march","april","may","june","july","agust","september","october","november","december"];
+
+	date.innerHTML = (today.getDate()<10?"0":"") + today.getDate();
+	weekdays.innerHTML = weekdays[today.getDay()];
+	month.innerHTML = allmonths[today.getMonth()];
+	year.innerHTML = today.getFullYear();
+</script>
+
+
+
+</body>
+</html>
